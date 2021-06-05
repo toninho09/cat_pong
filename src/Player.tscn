@@ -1,0 +1,24 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://src/Player.gd" type="Script" id=1]
+[ext_resource path="res://assets/paw_1.png" type="Texture" id=2]
+[ext_resource path="res://assets/paw_5.png" type="Texture" id=3]
+[ext_resource path="res://assets/paw_6.png" type="Texture" id=4]
+[ext_resource path="res://assets/paw_2.png" type="Texture" id=5]
+[ext_resource path="res://assets/paw_4.png" type="Texture" id=6]
+[ext_resource path="res://assets/paw_3.png" type="Texture" id=7]
+
+[node name="Player" type="RigidBody2D"]
+position = Vector2( 280.633, 330.969 )
+rotation = 0.7662
+mode = 1
+script = ExtResource( 1 )
+textures = [ ExtResource( 2 ), ExtResource( 5 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 3 ), ExtResource( 4 ) ]
+prefix = "p1"
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -0.851309, -38.8589 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( 0.970612, -2.33708, -12.2054, -19.3432, -10.3217, -39.3107, -11.9998, -56.096, -16.4391, -65.808, -9.17645, -79.4211, 3.74658, -81.7984, 13.2596, -69.3635, 11.0536, -58.6539, 12.1532, -18.2504 )
